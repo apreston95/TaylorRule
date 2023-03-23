@@ -91,7 +91,7 @@ dynare_sensitivity;
 identification;
  
 // estimation(mh_tune_jscale,datafile=NK_Data,mode_compute=9,mode_check,mh_replic=300000,mh_nblocks=1,mh_drop=0.25,tex) Y R Pi;
-estimation(mh_tune_jscale,datafile=NK_Data,mode_compute=6,mode_check,mh_replic=300000,mh_nblocks=1,mh_drop=0.25,tex) Y R Pi;
+estimation(datafile=NK_Data,mode_compute=6,mode_check,mh_replic=300000,mh_nblocks=1,mh_drop=0.25,tex) Y R Pi;
 
 
 write_latex_prior_table;  
