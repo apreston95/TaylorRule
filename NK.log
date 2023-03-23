@@ -1,0 +1,435 @@
+Starting Dynare (version 5.1).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 2).
+Computing static model derivatives w.r.t. parameters (order 2).
+Computing dynamic model derivatives (order 2).
+Computing dynamic model derivatives w.r.t. parameters (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : Y
+Equation number 2 : 0 : Pi
+Equation number 3 : 0 : R
+Equation number 4 : 0 : D
+Equation number 5 : 0 : Z
+Equation number 6 : 0 : Eps_R
+
+
+
+STEADY-STATE RESULTS:
+
+Y     		 0
+R     		 0
+Pi    		 0
+D     		 0
+Z     		 0
+Eps_R 		 0
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+           0.457            0.457                0
+           0.962            0.962                0
+           0.994            0.994                0
+           1.486             1.34           0.6408
+           1.486             1.34          -0.6408
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         6
+  Number of stochastic shocks: 3
+  Number of state variables:   3
+  Number of jumpers:           2
+  Number of static variables:  1
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables     Shock_D   Shock_Z   Shock_R
+Shock_D      0.008464  0.000000  0.000000
+Shock_Z      0.000000  0.330625  0.000000
+Shock_R      0.000000  0.000000  0.657721
+
+POLICY AND TRANSITION FUNCTIONS
+                                   Y               R              Pi               D               Z           Eps_R
+D(-1)                       0.083552        2.103205        1.189585        0.962000               0               0
+Z(-1)                      -1.466433       -0.006248       -0.015137               0        0.994000               0
+Eps_R(-1)                  -0.212211       -0.004850       -0.262759               0               0        0.457000
+Shock_D                     0.086852        2.186284        1.236574        1.000000               0               0
+Shock_Z                    -1.475284       -0.006286       -0.015229               0        1.000000               0
+Shock_R                    -0.464357       -0.010614       -0.574966               0               0        1.000000
+
+
+MOMENTS OF SIMULATED VARIABLES
+VARIABLE              MEAN       STD. DEV.        VARIANCE        SKEWNESS        KURTOSIS
+Y                 1.188368        6.483940       42.041477       -0.054947        0.087431
+R                 0.055945        0.739858        0.547389        0.178357        0.065465
+Pi                0.045481        0.672258        0.451931        0.048796        0.024478
+D                 0.023246        0.338334        0.114470        0.179021        0.074249
+Z                -0.801672        4.389108       19.264272        0.052180        0.081891
+Eps_R            -0.007873        0.902718        0.814900       -0.000008       -0.003851
+
+
+CORRELATION OF SIMULATED VARIABLES
+VARIABLE          Y        R       Pi        D        Z    Eps_R
+Y            1.0000   0.0245   0.1328  -0.0134  -0.9979  -0.0543
+R            0.0245   1.0000   0.6419   0.9992  -0.0185  -0.0236
+Pi           0.1328   0.6419   1.0000   0.6290  -0.0798  -0.7779
+D           -0.0134   0.9992   0.6290   1.0000   0.0187  -0.0110
+Z           -0.9979  -0.0185  -0.0798   0.0187   1.0000  -0.0104
+Eps_R       -0.0543  -0.0236  -0.7779  -0.0110  -0.0104   1.0000
+
+
+AUTOCORRELATION OF SIMULATED VARIABLES
+VARIABLE          1        2        3        4        5
+Y            0.9890   0.9797   0.9711   0.9629   0.9549
+R            0.9627   0.9265   0.8912   0.8564   0.8225
+Pi           0.6618   0.5057   0.4262   0.3826   0.3450
+D            0.9628   0.9263   0.8910   0.8562   0.8222
+Z            0.9914   0.9831   0.9748   0.9668   0.9587
+Eps_R        0.4542   0.2063   0.0921   0.0379  -0.0054
+
+
+
+VARIANCE DECOMPOSITION SIMULATING ONE SHOCK AT A TIME (in percent)
+                  Shock_D           Shock_Z           Shock_R  Tot. lin. contr.
+Y                    0.00             99.74              0.42            100.16
+R                   99.97              0.14              0.02            100.12
+Pi                  38.73              0.99             59.62             99.34
+D                  100.01              0.00              0.00            100.01
+Z                    0.00            100.01              0.00            100.01
+Eps_R                0.00              0.00            100.01            100.01
+Note: numbers do not add up to 100 due to non-zero correlation of simulated shocks in small samples
+
+
+======== Identification Analysis ========
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 robust
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the Jacobian of steady state and reduced-form solution matrices (rank(Tau) is full with tol = robust).
+
+MINIMAL SYSTEM (KOMUNJER AND NG, 2011):
+    All parameters are identified in the Jacobian of steady state and minimal system (rank(Deltabar) is full with tol = robust).
+
+SPECTRUM (QU AND TKACHENKO, 2012):
+    All parameters are identified in the Jacobian of mean and spectrum (rank(Gbar) is full with tol = robust).
+
+MOMENTS (ISKREV, 2010):
+    All parameters are identified in the Jacobian of first two moments (rank(J) is full with tol = robust).
+
+==== Identification analysis completed ====
+
+Initial value of the log posterior (or likelihood): -461.4299
+  n=9: (5,10)-CMA-ES(w=[46 27 16 9 3]%, mu_eff=3.2) on function dsge_likelihood
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+    1 ,     11 : 6.2236349917469e+03 +(8e+05,Inf) | 1.82e+04 |  6:6.1e-02  2:1.1e+03
+[Warning: Non-finite fitness range] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cmaes', 'C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\optimization\cmaes.m', 974)" style="font-weight:bold">cmaes</a> (<a href="matlab: opentoline('C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\optimization\cmaes.m',974,0)">line 974</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\optimization\dynare_minimize_objective.m', 442)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\optimization\dynare_minimize_objective.m',442,0)">line 442</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\dynare_estimation_1.m', 211)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\dynare_estimation_1.m',211,0)">line 211</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\dynare_estimation.m', 118)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\dynare_estimation.m',118,0)">line 118</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('NK.driver', 'C:\Users\uctpapr\Downloads\Public Code_Data\Public Code_Data\+NK\driver.m', 238)" style="font-weight:bold">NK.driver</a> (<a href="matlab: opentoline('C:\Users\uctpapr\Downloads\Public Code_Data\Public Code_Data\+NK\driver.m',238,0)">line 238</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\Users\uctpapr\Downloads\dynare-5.1-win\dynare-5.1\matlab\dynare.m',281,0)">line 281</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Table2', 'C:\Users\uctpapr\Downloads\Public Code_Data\Public Code_Data\Table2.m', 4)" style="font-weight:bold">Table2</a> (<a href="matlab: opentoline('C:\Users\uctpapr\Downloads\Public Code_Data\Public Code_Data\Table2.m',4,0)">line 4</a>)] 
+    2 ,     21 : 5.6246749216149e+03 +(4e+05,Inf) | 1.89e+04 |  6:6.0e-02  2:1.1e+03
+   10 ,    101 : 6.1065543635349e+03 +(4e+02,6e+02) | 2.29e+04 |  6:5.7e-02  1:1.1e+03
+   20 ,    201 : 6.1811491501347e+03 +(3e+02,6e+02) | 2.08e+04 |  6:6.6e-02  1:1.2e+03
+   30 ,    301 : 5.2935910765246e+03 +(2e+02,2e+06) | 2.16e+04 |  6:5.0e-02  1:8.6e+02
+   40 ,    401 : 4.8296285652765e+03 +(9e+02,1e+06) | 2.30e+04 |  6:2.8e-02  2:5.1e+02
+   50 ,    501 : 4.8033844297385e+03 +(7e+02,3e+06) | 2.17e+04 |  6:2.8e-02  2:4.5e+02
+   60 ,    601 : 4.0655195303463e+03 +(8e+02,1e+06) | 2.39e+04 |  6:1.3e-02  2:2.4e+02
+   70 ,    701 : 4.2697471673895e+03 +(7e+05,3e+06) | 2.18e+04 |  6:8.9e-03  2:1.5e+02
+   80 ,    801 : 3.7108469901963e+03 +(8e+05,2e+06) | 2.21e+04 |  6:7.9e-03  2:1.4e+02
+   90 ,    901 : 4.0673852555490e+03 +(7e+05,1e+06) | 2.25e+04 |  6:5.2e-03  2:9.3e+01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  100 ,   1001 : 3.9733970402557e+03 +(2e+06,4e+06) | 2.54e+04 |  6:5.1e-03  2:1.1e+02
+  110 ,   1101 : 3.8864357661636e+03 +(4e+02,1e+06) | 2.77e+04 |  6:3.8e-03  2:8.7e+01
+  120 ,   1201 : 3.0030570396682e+03 +(6e+02,2e+06) | 3.06e+04 |  6:3.9e-03  2:9.2e+01
+  130 ,   1301 : 3.2831957252795e+03 +(2e+06,2e+06) | 2.99e+04 |  6:2.3e-03  2:5.7e+01
+  140 ,   1401 : 2.8535837403870e+03 +(4e+02,2e+06) | 3.29e+04 |  6:2.0e-03  2:5.3e+01
+  150 ,   1501 : 2.5858628867162e+03 +(1e+06,4e+06) | 3.20e+04 |  6:1.5e-03  2:3.5e+01
+  160 ,   1601 : 2.5430607424640e+03 +(2e+02,5e+02) | 3.10e+04 |  6:1.1e-03  2:2.6e+01
+  170 ,   1701 : 2.1854428890922e+03 +(2e+06,2e+06) | 3.14e+04 |  6:9.8e-04  2:2.2e+01
+  180 ,   1801 : 1.9877711665382e+03 +(1e+05,2e+06) | 3.08e+04 |  6:1.6e-03  2:3.8e+01
+  190 ,   1901 : 2.1495659188776e+03 +(4e+02,2e+06) | 2.78e+04 |  6:1.0e-03  2:2.2e+01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  200 ,   2001 : 1.4869948684494e+03 +(3e+03,2e+06) | 2.66e+04 |  6:6.2e-04  2:1.2e+01
+  210 ,   2101 : 1.2139556886145e+03 +(5e+02,2e+05) | 2.52e+04 |  6:4.0e-04  2:6.0e+00
+  220 ,   2201 : 1.4029196708956e+03 +(2e+02,2e+05) | 2.26e+04 |  6:2.8e-04  2:3.6e+00
+  230 ,   2301 : 1.0268109468754e+03 +(4e+02,2e+05) | 2.01e+04 |  6:3.3e-04  2:3.5e+00
+  240 ,   2401 : 1.1325816098228e+03 +(4e+02,2e+05) | 1.78e+04 |  6:4.4e-04  2:3.3e+00
+  250 ,   2501 : 1.0812326103493e+03 +(5e+02,2e+05) | 1.55e+04 |  6:4.6e-04  2:2.7e+00
+  260 ,   2601 : 1.0440286686794e+03 +(2e+02,2e+05) | 1.16e+04 |  6:4.6e-04  2:2.3e+00
+  270 ,   2701 : 1.0364293433764e+03 +(4e+02,2e+05) | 1.04e+04 |  6:3.3e-04  2:1.4e+00
+  280 ,   2801 : 9.8059898073250e+02 +(2e+02,2e+05) | 9.14e+03 |  4:2.2e-04  2:6.8e-01
+  290 ,   2901 : 9.6756274101295e+02 +(4e+01,2e+05) | 7.99e+03 |  4:1.3e-04  2:3.7e-01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  300 ,   3001 : 9.6004064282161e+02 +(4e+02,2e+05) | 7.12e+03 |  6:1.4e-04  2:3.4e-01
+  310 ,   3101 : 9.7334577854775e+02 +(6e+01,2e+05) | 6.51e+03 |  4:1.8e-04  2:3.4e-01
+  320 ,   3201 : 9.5893365475793e+02 +(8e+01,2e+05) | 5.66e+03 |  4:2.9e-04  2:4.0e-01
+  330 ,   3301 : 9.4542565886300e+02 +(5e+01,2e+05) | 4.99e+03 |  6:2.5e-04  1:2.8e-01
+  340 ,   3401 : 9.3757944134646e+02 +(3e+01,3e+04) | 4.91e+03 |  6:1.9e-04  1:2.1e-01
+  350 ,   3501 : 9.3568783299767e+02 +(5e+00,2e+02) | 4.37e+03 |  6:1.3e-04  1:1.4e-01
+  360 ,   3601 : 9.3411032504881e+02 +(5e+00,2e+01) | 4.15e+03 |  6:5.5e-05  1:5.4e-02
+  370 ,   3701 : 9.3341783118941e+02 +(1e+00,3e+00) | 3.91e+03 |  6:6.2e-05  1:5.4e-02
+  380 ,   3801 : 9.3313714714679e+02 +(3e-01,2e+00) | 3.72e+03 |  6:3.8e-05  1:3.3e-02
+  390 ,   3901 : 9.3304796163427e+02 +(2e-01,1e+00) | 3.51e+03 |  6:3.3e-05  1:2.5e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  400 ,   4001 : 9.3302403670696e+02 +(7e-02,2e-01) | 3.46e+03 |  6:1.7e-05  1:1.2e-02
+  410 ,   4101 : 9.3290230948449e+02 +(8e-02,5e-01) | 3.31e+03 |  6:2.9e-05  1:1.7e-02
+  420 ,   4201 : 9.3263824476289e+02 +(1e-01,3e-01) | 3.12e+03 |  8:4.0e-05  1:2.0e-02
+  430 ,   4301 : 9.3194072552498e+02 +(6e-01,3e+00) | 3.02e+03 |  8:8.2e-05  1:3.7e-02
+  440 ,   4401 : 9.3063258822738e+02 +(3e-01,2e+00) | 2.87e+03 |  8:1.3e-04  1:5.4e-02
+  450 ,   4501 : 9.2717487435414e+02 +(2e+00,4e+00) | 2.97e+03 |  8:2.1e-04  1:8.9e-02
+  460 ,   4601 : 9.1608627039277e+02 +(2e+01,1e+02) | 2.80e+03 |  8:5.2e-04  1:2.1e-01
+  470 ,   4701 : 8.8834672127705e+02 +(3e+01,9e+01) | 2.63e+03 |  8:5.9e-04  1:2.3e-01
+  480 ,   4801 : 8.8118097181811e+02 +(1e+01,7e+02) | 2.37e+03 |  8:5.3e-04  1:1.7e-01
+  490 ,   4901 : 8.7432854390945e+02 +(5e+00,1e+01) | 2.02e+03 |  8:3.6e-04  1:1.1e-01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  500 ,   5001 : 8.7207073420824e+02 +(1e+00,3e+00) | 1.96e+03 |  8:2.1e-04  1:5.8e-02
+  510 ,   5101 : 8.7145246733190e+02 +(6e-01,2e+00) | 1.85e+03 |  8:1.4e-04  1:3.1e-02
+  520 ,   5201 : 8.7102801256717e+02 +(9e-01,3e+00) | 1.76e+03 |  8:3.1e-04  1:4.1e-02
+  530 ,   5301 : 8.7078782643568e+02 +(3e-01,4e+00) | 1.66e+03 |  8:4.2e-04  1:3.7e-02
+  540 ,   5401 : 8.6831980519264e+02 +(3e+00,1e+01) | 1.46e+03 |  8:1.3e-03  1:7.5e-02
+  550 ,   5501 : 8.6606530071816e+02 +(2e+00,2e+01) | 1.38e+03 |  7:2.6e-03  1:9.7e-02
+  560 ,   5601 : 8.5903761010609e+02 +(8e+00,2e+01) | 1.33e+03 |  8:4.4e-03  1:1.1e-01
+  570 ,   5701 : 8.5065061573864e+02 +(9e+00,4e+01) | 1.36e+03 |  6:7.1e-03  1:1.4e-01
+  580 ,   5801 : 8.2929037854681e+02 +(3e+01,2e+02) | 1.31e+03 |  6:1.5e-02  1:3.1e-01
+  590 ,   5901 : 8.2774636337543e+02 +(1e+01,9e+01) | 1.45e+03 |  6:7.2e-03  1:1.6e-01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  600 ,   6001 : 8.2257412757074e+02 +(4e+00,1e+01) | 1.41e+03 |  6:4.3e-03  1:9.9e-02
+  610 ,   6101 : 8.2110016828829e+02 +(1e+00,3e+00) | 1.30e+03 |  6:2.5e-03  1:6.0e-02
+  620 ,   6201 : 8.2034736177836e+02 +(5e-01,3e+00) | 1.17e+03 |  6:1.8e-03  1:4.3e-02
+  630 ,   6301 : 8.1926245255911e+02 +(7e-01,3e+00) | 9.91e+02 |  6:1.7e-03  1:3.9e-02
+  640 ,   6401 : 8.1837656601235e+02 +(9e-01,2e+00) | 1.00e+03 |  6:1.7e-03  1:4.4e-02
+  650 ,   6501 : 8.1609514677690e+02 +(1e+00,2e+00) | 9.60e+02 |  6:1.6e-03  1:4.2e-02
+  660 ,   6601 : 8.1019763443209e+02 +(5e+00,1e+01) | 8.70e+02 |  6:3.8e-03  1:9.7e-02
+  670 ,   6701 : 7.9948626483307e+02 +(4e+00,7e+01) | 9.19e+02 |  6:9.9e-03  1:2.2e-01
+  680 ,   6801 : 7.6510851615338e+02 +(3e+01,5e+01) | 8.50e+02 |  6:1.2e-02  1:2.7e-01
+  690 ,   6901 : 7.6471816050072e+02 +(1e+01,4e+01) | 6.85e+02 |  6:9.8e-03  1:2.1e-01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  700 ,   7001 : 7.2414083531480e+02 +(2e+01,1e+02) | 6.73e+02 |  6:8.2e-03  1:1.7e-01
+  710 ,   7101 : 7.2093961795238e+02 +(9e+00,6e+01) | 6.79e+02 |  6:6.3e-03  1:1.1e-01
+  720 ,   7201 : 7.2329820196544e+02 +(3e+00,7e+00) | 5.98e+02 |  6:4.2e-03  1:6.9e-02
+  730 ,   7301 : 7.2184060356690e+02 +(2e+00,6e+00) | 5.77e+02 |  6:2.6e-03  5:4.1e-02
+  740 ,   7401 : 7.2070781103923e+02 +(4e+00,4e+00) | 4.77e+02 |  6:2.2e-03  5:3.4e-02
+  750 ,   7501 : 7.2030905359326e+02 +(1e+00,3e+00) | 5.25e+02 |  6:1.6e-03  5:2.5e-02
+  760 ,   7601 : 7.2008597698803e+02 +(1e+00,2e+00) | 5.26e+02 |  6:9.9e-04  5:1.5e-02
+  770 ,   7701 : 7.2038238812407e+02 +(7e-01,9e-01) | 5.80e+02 |  6:9.7e-04  5:1.5e-02
+  780 ,   7801 : 7.2038429494574e+02 +(3e-01,6e-01) | 6.00e+02 |  4:6.5e-04  5:1.2e-02
+  790 ,   7901 : 7.2018469962490e+02 +(3e-01,6e-01) | 6.04e+02 |  4:4.4e-04  5:9.1e-03
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  800 ,   8001 : 7.2004842134548e+02 +(3e-01,6e-01) | 6.91e+02 |  4:3.3e-04  5:8.2e-03
+  810 ,   8101 : 7.2013464745492e+02 +(1e-01,3e-01) | 6.69e+02 |  4:1.5e-04  5:4.3e-03
+  820 ,   8201 : 7.2014920447798e+02 +(5e-02,1e-01) | 6.67e+02 |  4:1.1e-04  5:3.8e-03
+  830 ,   8301 : 7.1995960279838e+02 +(7e-02,3e-01) | 7.55e+02 |  4:2.4e-04  5:1.0e-02
+  840 ,   8401 : 7.1933522435462e+02 +(4e-01,5e-01) | 7.93e+02 |  4:3.0e-04  5:1.4e-02
+  850 ,   8501 : 7.1833211495657e+02 +(4e-01,1e+00) | 7.45e+02 |  4:5.0e-04  5:2.4e-02
+  860 ,   8601 : 7.1168604168215e+02 +(4e+00,1e+01) | 7.14e+02 |  4:1.9e-03  5:8.9e-02
+  870 ,   8701 : 7.0011285413720e+02 +(7e+00,4e+01) | 6.74e+02 |  4:3.8e-03  5:1.8e-01
+  880 ,   8801 : 6.4678671691278e+02 +(2e+01,5e+01) | 6.22e+02 |  4:4.0e-03  5:2.0e-01
+  890 ,   8901 : 6.2124661087592e+02 +(2e+01,1e+02) | 5.48e+02 |  4:3.3e-03  5:1.6e-01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  900 ,   9001 : 5.8383439033732e+02 +(2e+01,5e+01) | 4.88e+02 |  4:2.9e-03  5:1.3e-01
+  910 ,   9101 : 5.7501605861771e+02 +(5e+00,3e+01) | 4.60e+02 |  4:1.9e-03  3:7.4e-02
+  920 ,   9201 : 5.6290619589694e+02 +(1e+01,2e+01) | 4.17e+02 |  4:1.9e-03  3:7.2e-02
+  930 ,   9301 : 5.5526736255589e+02 +(9e+00,5e+01) | 3.74e+02 |  4:1.8e-03  3:6.1e-02
+  940 ,   9401 : 5.5359014636662e+02 +(9e+00,2e+01) | 3.37e+02 |  4:1.8e-03  3:5.0e-02
+  950 ,   9501 : 5.5248827151644e+02 +(4e+00,7e+00) | 2.79e+02 |  4:1.4e-03  3:3.5e-02
+  960 ,   9601 : 5.5445349265784e+02 +(1e+00,3e+00) | 2.70e+02 |  4:1.0e-03  3:2.4e-02
+  970 ,   9701 : 5.5104930399840e+02 +(4e+00,7e+00) | 2.64e+02 |  4:1.1e-03  3:2.3e-02
+  980 ,   9801 : 5.5085187387624e+02 +(4e-01,2e+00) | 2.50e+02 |  6:9.5e-04  3:1.6e-02
+  990 ,   9901 : 5.4839005744949e+02 +(3e+00,6e+00) | 2.43e+02 |  6:1.7e-03  3:3.1e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+ 1000 ,  10001 : 5.4684548045098e+02 +(2e+00,3e+00) | 2.52e+02 |  6:1.1e-03  3:2.0e-02
+ 1010 ,  10101 : 5.4020460334060e+02 +(3e+00,7e+00) | 1.96e+02 |  6:2.0e-03  3:3.5e-02
+ 1020 ,  10201 : 5.3115704120833e+02 +(6e+00,1e+01) | 1.88e+02 |  6:2.9e-03  3:5.5e-02
+ 1030 ,  10301 : 5.2635881628777e+02 +(2e+00,1e+01) | 1.90e+02 |  6:3.8e-03  3:7.2e-02
+ 1040 ,  10401 : 5.1113683262725e+02 +(9e+00,2e+01) | 1.92e+02 |  6:3.2e-03  3:6.2e-02
+ 1050 ,  10501 : 5.0958162026615e+02 +(2e+00,3e+00) | 1.90e+02 |  6:1.2e-03  3:2.5e-02
+ 1060 ,  10601 : 5.0906570344977e+02 +(6e-01,2e+00) | 1.78e+02 |  6:9.0e-04  3:1.8e-02
+ 1070 ,  10701 : 5.0871532511389e+02 +(1e-01,1e+00) | 1.90e+02 |  6:5.7e-04  3:1.3e-02
+ 1080 ,  10801 : 5.0871201843659e+02 +(8e-02,2e-01) | 1.81e+02 |  6:2.7e-04  3:6.2e-03
+ 1090 ,  10901 : 5.0864791225589e+02 +(5e-02,6e-02) | 1.98e+02 |  6:1.9e-04  3:5.0e-03
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+ 1100 ,  11001 : 5.0861348099150e+02 +(2e-02,3e-02) | 1.99e+02 |  6:7.3e-05  3:2.0e-03
+ 1110 ,  11101 : 5.0858945589250e+02 +(2e-02,3e-02) | 1.84e+02 |  6:6.7e-05  3:2.0e-03
+ 1120 ,  11201 : 5.0858192784382e+02 +(9e-03,2e-02) | 1.46e+02 |  6:6.1e-05  3:1.7e-03
+ 1130 ,  11301 : 5.0855793866512e+02 +(1e-02,2e-02) | 1.27e+02 |  6:7.9e-05  3:2.3e-03
+ 1140 ,  11401 : 5.0849423913179e+02 +(2e-02,4e-02) | 1.33e+02 |  6:1.3e-04  3:3.7e-03
+ 1150 ,  11501 : 5.0829473220808e+02 +(7e-02,1e-01) | 1.16e+02 |  6:2.7e-04  3:6.0e-03
+ 1160 ,  11601 : 5.0717542676030e+02 +(7e-01,2e+00) | 1.15e+02 |  6:1.3e-03  3:2.4e-02
+ 1170 ,  11701 : 5.0512160462762e+02 +(7e-01,3e+00) | 9.89e+01 |  8:2.1e-03  3:3.8e-02
+ 1180 ,  11801 : 5.0200489023067e+02 +(6e+00,2e+01) | 9.18e+01 |  8:5.1e-03  3:9.9e-02
+ 1190 ,  11901 : 4.9536354670486e+02 +(9e+00,4e+01) | 8.42e+01 |  8:4.8e-03  3:9.5e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+ 1200 ,  12001 : 4.8533204064756e+02 +(5e+00,2e+01) | 8.28e+01 |  8:3.8e-03  3:7.6e-02
+ 1210 ,  12101 : 4.8120168407501e+02 +(2e+00,1e+01) | 7.55e+01 |  8:3.0e-03  3:5.8e-02
+ 1220 ,  12201 : 4.7980785540864e+02 +(1e+00,2e+00) | 6.58e+01 |  8:1.4e-03  3:2.7e-02
+ 1230 ,  12301 : 4.7921329866294e+02 +(3e-01,8e-01) | 5.69e+01 |  8:9.6e-04  3:1.7e-02
+ 1240 ,  12401 : 4.7866161491994e+02 +(2e-01,7e-01) | 6.00e+01 |  8:9.8e-04  3:1.8e-02
+ 1250 ,  12501 : 4.7795182568236e+02 +(5e-01,2e+00) | 5.97e+01 |  8:1.4e-03  3:2.5e-02
+ 1260 ,  12601 : 4.7639091386422e+02 +(1e+00,3e+00) | 7.09e+01 |  8:1.7e-03  3:3.2e-02
+ 1270 ,  12701 : 4.7469687387217e+02 +(7e-01,2e+00) | 1.09e+02 |  8:1.7e-03  5:5.0e-02
+ 1280 ,  12801 : 4.7412816764559e+02 +(3e-01,1e+00) | 1.15e+02 |  8:1.2e-03  5:3.9e-02
+ 1290 ,  12901 : 4.7394190506991e+02 +(1e-01,2e-01) | 1.19e+02 |  8:4.3e-04  5:1.7e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+ 1300 ,  13001 : 4.7385476038609e+02 +(1e-02,3e-02) | 1.23e+02 |  8:1.9e-04  5:8.3e-03
+ 1310 ,  13101 : 4.7378469742915e+02 +(2e-02,6e-02) | 7.43e+01 |  8:2.5e-04  5:1.0e-02
+ 1320 ,  13201 : 4.7354900297651e+02 +(1e-01,2e-01) | 5.94e+01 |  8:6.0e-04  5:2.6e-02
+ 1330 ,  13301 : 4.7280240701146e+02 +(3e-01,6e-01) | 5.94e+01 |  8:1.0e-03  5:4.6e-02
+ 1340 ,  13401 : 4.7194838957663e+02 +(7e-01,1e+00) | 5.88e+01 |  8:1.1e-03  5:5.0e-02
+ 1350 ,  13501 : 4.6982188746594e+02 +(4e-01,2e+00) | 5.87e+01 |  8:1.6e-03  5:7.3e-02
+ 1360 ,  13601 : 4.6625407342238e+02 +(2e+00,6e+00) | 6.48e+01 |  8:2.2e-03  5:1.1e-01
+ 1370 ,  13701 : 4.6357797751147e+02 +(6e+00,2e+01) | 6.39e+01 |  8:2.4e-03  5:1.2e-01
+ 1380 ,  13801 : 4.6159387031496e+02 +(7e-01,2e+00) | 6.49e+01 |  8:9.0e-04  5:4.8e-02
+ 1390 ,  13901 : 4.6109156792993e+02 +(1e-01,2e-01) | 6.61e+01 |  8:4.7e-04  5:2.5e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+ 1400 ,  14001 : 4.6098421296967e+02 +(5e-02,1e-01) | 6.73e+01 |  8:2.8e-04  5:1.5e-02
+ 1410 ,  14101 : 4.6093511757489e+02 +(3e-02,5e-02) | 6.52e+01 |  8:1.9e-04  5:1.0e-02
+ 1420 ,  14201 : 4.6093723591700e+02 +(8e-03,2e-02) | 7.13e+01 |  8:1.4e-04  5:8.1e-03
+ 1430 ,  14301 : 4.6093009139450e+02 +(8e-04,5e-03) | 7.20e+01 |  8:6.4e-05  5:3.7e-03
+ 1440 ,  14401 : 4.6092726619769e+02 +(4e-04,1e-03) | 7.09e+01 |  8:3.3e-05  5:1.8e-03
+ 1450 ,  14501 : 4.6092646896449e+02 +(4e-05,2e-04) | 6.95e+01 |  8:1.3e-05  5:7.1e-04
+ 1460 ,  14601 : 4.6092634024466e+02 +(4e-05,6e-05) | 7.28e+01 |  8:6.3e-06  5:3.5e-04
+ 1470 ,  14701 : 4.6092631870171e+02 +(8e-06,2e-05) | 6.40e+01 |  8:3.6e-06  5:1.9e-04
+ 1480 ,  14801 : 4.6092631463132e+02 +(2e-06,5e-06) | 6.48e+01 |  8:1.5e-06  5:8.3e-05
+ 1490 ,  14901 : 4.6092631412564e+02 +(3e-07,9e-07) | 6.33e+01 |  8:9.0e-07  5:4.6e-05
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+ 1500 ,  15001 : 4.6092631377731e+02 +(7e-08,1e-07) | 6.15e+01 |  8:3.5e-07  5:1.7e-05
+ 1510 ,  15101 : 4.6092631376684e+02 +(1e-08,2e-08) | 6.11e+01 |  8:1.3e-07  5:6.4e-06
+ 1520 ,  15201 : 4.6092631376587e+02 +(4e-09,7e-09) | 6.03e+01 |  8:6.9e-08  5:3.4e-06
+ 1530 ,  15301 : 4.6092631376424e+02 +(6e-10,1e-09) | 6.06e+01 |  8:3.5e-08  5:1.7e-06
+ 1533 ,  15331 : 4.6092631376412e+02 +(4e-10,5e-10) | 5.96e+01 |  8:2.5e-08  5:1.2e-06
+#Fevals:   f(returned x)   |    bestever.f     | stopflag (saved to variablescmaes.mat)
+  15332: 4.60926313764e+02 | 4.60926313764e+02 | tolfun
+mean solution: +8.2e-02 +5.8e-01 +7.5e-01 +6.8e-01 +1.6e+00 -2.0e-02 +9.6e-01 +1.0e+00 +4.6e-01
+std deviation:  9.4e-08  4.5e-07  5.7e-07  5.4e-07  1.2e-06  1.0e-07  1.0e-07  2.5e-08  1.4e-07
+use plotcmaesdat.m for plotting the output at any time (option LogModulo must not be zero)
+
+Final value of minus the log posterior (or likelihood):460.926314 
+
+MODE CHECK
+
+Fval obtained by the minimization routine (minus the posterior/likelihood)): 460.926314
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+        prior mean     mode    s.d.  prior pstdev
+
+Kappa       0.1000   0.6773  0.0776   gamm 0.0500 
+Phi_Pi      1.5000   1.6453  0.1612   norm 0.2500 
+Phi_Y       0.1250  -0.0201  0.0114   norm 0.0250 
+Rho_D       0.5000   0.9648  0.0122   beta 0.2000 
+Rho_Z       0.5000   0.9957  0.0026   beta 0.2000 
+Rho_R       0.5000   0.4572  0.0212   beta 0.2000 
+
+standard deviation of shocks
+        prior mean     mode    s.d.  prior pstdev
+
+Shock_D     0.1000   0.0821  0.0132   invg 2.0000 
+Shock_Z     0.1000   0.5752  0.0626   invg 2.0000 
+Shock_R     0.1000   0.7500  0.0774   invg 2.0000 
+
+
+Log data density [Laplace approximation] is -489.306089.
+
+mh_jscale has been set equal to 0.62018
+Estimation::mcmc: Multiple chains mode.
+Estimation::mcmc: Searching for initial values...
+Estimation::mcmc: Initial values found!
+
+Estimation::mcmc: Write details about the MCMC... Ok!
+Estimation::mcmc: Details about the MCMC are available in NK/metropolis\NK_mh_history_0.mat
+
+
+Estimation::mcmc: Number of mh files: 1 per block.
+Estimation::mcmc: Total number of generated files: 2.
+Estimation::mcmc: Total number of iterations: 100000.
+Estimation::mcmc: Current acceptance ratio per chain: 
+                                                       Chain  1: 34.482%
+                                                       Chain  2: 34.403%
+Estimation::mcmc: Total number of MH draws per chain: 100000.
+Estimation::mcmc: Total number of generated MH files: 1.
+Estimation::mcmc: I'll use mh-files 1 to 1.
+Estimation::mcmc: In MH-file number 1 I'll start at line 50001.
+Estimation::mcmc: Finally I keep 50000 draws per chain.
+
+
+
+MCMC Inefficiency factors per block
+Parameter        Block 1     Block 2
+SE_Shock_D        53.892      42.617
+SE_Shock_Z        26.742      34.150
+SE_Shock_R        77.206      57.994
+Kappa             27.851      27.519
+Phi_Pi            67.885      52.710
+Phi_Y             48.143      56.527
+Rho_D             37.843      37.545
+Rho_Z             52.684      51.131
+Rho_R             30.448      28.695
+
+Estimation::mcmc::diagnostics: Univariate convergence diagnostic, Brooks and Gelman (1998):
+    Parameter 1...  Done! 
+    Parameter 2...  Done! 
+    Parameter 3...  Done! 
+    Parameter 4...  Done! 
+    Parameter 5...  Done! 
+    Parameter 6...  Done! 
+    Parameter 7...  Done! 
+    Parameter 8...  Done! 
+    Parameter 9...  Done! 
+
+Estimation::marginal density: I'm computing the posterior mean and covariance...  Done!
+Estimation::marginal density: I'm computing the posterior log marginal density (modified harmonic mean)... Done!
+
+
+ESTIMATION RESULTS
+
+Log data density is -489.191666.
+
+parameters
+          prior mean   post. mean        90% HPD interval    prior       pstdev
+
+Kappa          0.100       0.6774      0.5879      0.7866     gamm       0.0500
+Phi_Pi         1.500       1.7616      1.4819      2.0344     norm       0.2500
+Phi_Y          0.125      -0.0144     -0.0340      0.0028     norm       0.0250
+Rho_D          0.500       0.9619      0.9420      0.9814     beta       0.2000
+Rho_Z          0.500       0.9941      0.9897      0.9990     beta       0.2000
+Rho_R          0.500       0.4576      0.4272      0.4872     beta       0.2000
+
+standard deviation of shocks
+          prior mean   post. mean        90% HPD interval    prior       pstdev
+
+Shock_D        0.100       0.0914      0.0704      0.1118     invg       2.0000
+Shock_Z        0.100       0.5747      0.4865      0.6603     invg       2.0000
+Shock_R        0.100       0.8077      0.6716      0.9481     invg       2.0000
+Total computing time : 0h05m05s
+Note: warning(s) encountered in MATLAB/Octave code
